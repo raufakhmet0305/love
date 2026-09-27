@@ -1,0 +1,529 @@
+/* =========================================
+   FINAL PAGE
+========================================= */
+
+.final-page {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SCENE
+========================================= */
+
+.final-scene {
+    position: relative;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(90, 8, 30, 0.18),
+            transparent 38%
+        ),
+        linear-gradient(
+            145deg,
+            #030303,
+            #0b0307 55%,
+            #030303
+        );
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.final-vignette {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 30%,
+            rgba(0, 0, 0, 0.65) 100%
+        );
+}
+
+
+.final-orb {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+
+.final-orb-one {
+    width: 420px;
+    height: 420px;
+
+    left: -100px;
+    top: 10%;
+
+    background: rgba(100, 8, 35, 0.12);
+
+    animation:
+        finalOrbOne 14s ease-in-out infinite;
+}
+
+
+.final-orb-two {
+    width: 350px;
+    height: 350px;
+
+    right: -80px;
+    bottom: 5%;
+
+    background: rgba(65, 5, 30, 0.12);
+
+    animation:
+        finalOrbTwo 17s ease-in-out infinite;
+}
+
+
+@keyframes finalOrbOne {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(100px, 80px);
+    }
+
+}
+
+
+@keyframes finalOrbTwo {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-100px, -60px);
+    }
+
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.final-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   STEPS
+========================================= */
+
+.final-step {
+    opacity: 0;
+}
+
+
+.final-date {
+    animation:
+        finalDate 1.5s ease forwards;
+
+    animation-delay: 1.8s;
+}
+
+
+.final-date span {
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 11px;
+
+    letter-spacing: 0.3em;
+}
+
+
+/* =========================================
+   NAMES
+========================================= */
+
+.final-names {
+    margin-top: 35px;
+
+    animation:
+        finalNames 1.8s ease forwards;
+
+    animation-delay: 3.2s;
+}
+
+
+.final-names h1 {
+    margin: 0;
+
+    font-size: clamp(65px, 10vw, 145px);
+
+    line-height: 0.9;
+
+    font-weight: 300;
+
+    letter-spacing: -0.065em;
+}
+
+
+.final-names h1 span {
+    margin: 0 12px;
+
+    color: rgba(150, 30, 60, 0.75);
+
+    font-weight: 200;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.final-message {
+    margin-top: 55px;
+
+    animation:
+        finalMessage 1.5s ease forwards;
+
+    animation-delay: 5.3s;
+}
+
+
+.final-message p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: clamp(17px, 2vw, 22px);
+
+    line-height: 1.65;
+
+    font-weight: 300;
+}
+
+
+/* =========================================
+   HEART
+========================================= */
+
+.final-heart {
+    margin-top: 55px;
+
+    color: rgba(175, 35, 70, 0.85);
+
+    font-size: 32px;
+
+    animation:
+        finalHeart 1.2s ease forwards,
+        finalHeartPulse 3s ease-in-out 7s infinite;
+
+    animation-delay: 6.8s, 8s;
+}
+
+
+@keyframes finalHeartPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* =========================================
+   CONTINUATION
+========================================= */
+
+.final-continuation {
+    margin-top: 65px;
+
+    animation:
+        finalContinuation 2s ease forwards;
+
+    animation-delay: 8.3s;
+}
+
+
+.final-continuation span {
+    color: rgba(255, 255, 255, 0.32);
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================
+   LINES
+========================================= */
+
+.final-line {
+    position: absolute;
+
+    z-index: 4;
+
+    width: 1px;
+
+    height: 100px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(255, 255, 255, 0.16),
+            transparent
+        );
+
+    opacity: 0.5;
+}
+
+
+.final-line-top {
+    left: 50%;
+
+    top: 0;
+}
+
+
+.final-line-bottom {
+    left: 50%;
+
+    bottom: 0;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes finalDate {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes finalNames {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+@keyframes finalMessage {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@keyframes finalHeart {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+
+}
+
+
+@keyframes finalContinuation {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .final-scene {
+        padding: 30px 20px;
+    }
+
+
+    .final-names {
+        margin-top: 28px;
+    }
+
+
+    .final-names h1 {
+        font-size: clamp(55px, 16vw, 85px);
+
+        max-width: 100%;
+    }
+
+
+    .final-names h1 span {
+        margin: 0 6px;
+    }
+
+
+    .final-message {
+        margin-top: 45px;
+    }
+
+
+    .final-message p {
+        font-size: 16px;
+    }
+
+
+    .final-heart {
+        margin-top: 45px;
+    }
+
+
+    .final-continuation {
+        margin-top: 50px;
+    }
+
+
+    .final-continuation span {
+        font-size: 15px;
+    }
+
+
+    .final-orb-one {
+        width: 260px;
+        height: 260px;
+    }
+
+
+    .final-orb-two {
+        width: 220px;
+        height: 220px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .final-names h1 {
+        font-size: 52px;
+    }
+
+
+    .final-message {
+        margin-top: 35px;
+    }
+
+
+    .final-heart {
+        margin-top: 35px;
+    }
+
+}
+

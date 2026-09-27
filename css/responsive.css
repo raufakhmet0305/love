@@ -1,0 +1,323 @@
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .header-inner {
+
+        width:
+            min(100% - 32px, 700px);
+
+    }
+
+
+    .desktop-nav {
+
+        display: none;
+
+    }
+
+
+    .menu-toggle {
+
+        display: flex;
+
+    }
+
+
+    .mobile-menu {
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 999;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        background:
+            rgba(5, 5, 5, 0.97);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.4s ease,
+            visibility 0.4s ease,
+            transform 0.4s ease;
+
+    }
+
+
+    .mobile-menu.active {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+
+    }
+
+
+    .mobile-menu nav {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 24px;
+
+    }
+
+
+    .mobile-menu a {
+
+        font-size: 25px;
+
+        font-weight: 300;
+
+        color:
+            rgba(255,255,255,0.65);
+
+        transition:
+            color 0.3s ease;
+
+    }
+
+
+    .mobile-menu a:hover,
+    .mobile-menu a.active {
+
+        color: #ffffff;
+
+    }
+
+
+    .home-navigation-inner {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header-inner {
+
+        height: 72px;
+
+        width:
+            calc(100% - 28px);
+
+    }
+
+
+    .logo {
+
+        font-size: 16px;
+
+    }
+
+
+    .hero-content {
+
+        padding:
+            100px 18px 80px;
+
+    }
+
+
+    .hero-date {
+
+        font-size: 10px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .hero-title {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        font-size:
+            clamp(46px, 15vw, 76px);
+
+    }
+
+
+    .hero-symbol {
+
+        font-size: 0.55em;
+
+    }
+
+
+    .relationship-counter {
+
+        gap: 7px;
+
+        margin-top: 42px;
+
+    }
+
+
+    .counter-item {
+
+        min-width: 43px;
+
+    }
+
+
+    .counter-number {
+
+        font-size: 19px;
+
+    }
+
+
+    .counter-label {
+
+        font-size: 7px;
+
+        letter-spacing: 0.12em;
+
+    }
+
+
+    .counter-divider {
+
+        font-size: 13px;
+
+    }
+
+
+    .hero-message {
+
+        font-size: 12px;
+
+    }
+
+
+    .home-navigation {
+
+        padding:
+            80px 16px;
+
+    }
+
+
+    .home-nav-card {
+
+        min-height: 160px;
+
+        padding: 22px;
+
+    }
+
+
+    .home-nav-title {
+
+        font-size: 20px;
+
+    }
+
+
+    .footer-inner {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+
+    }
+
+
+    .mobile-menu a {
+
+        font-size: 22px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .relationship-counter {
+
+        gap: 4px;
+
+    }
+
+
+    .counter-item {
+
+        min-width: 38px;
+
+    }
+
+
+    .counter-number {
+
+        font-size: 17px;
+
+    }
+
+
+    .counter-label {
+
+        font-size: 6px;
+
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+}
+

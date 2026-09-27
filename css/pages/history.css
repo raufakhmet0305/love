@@ -1,0 +1,677 @@
+/* =========================================
+   HISTORY HERO
+========================================= */
+
+.history-hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(105, 15, 45, 0.18),
+            transparent 42%
+        );
+}
+
+
+.history-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(105, 15, 45, 0.08);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+
+.history-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(850px, calc(100% - 40px));
+
+    padding-top: 70px;
+}
+
+
+.history-label {
+
+    display: block;
+
+    margin-bottom: 28px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.4em;
+
+    color:
+        rgba(255, 255, 255, 0.42);
+}
+
+
+.history-hero h1 {
+
+    font-size:
+        clamp(44px, 7vw, 92px);
+
+    font-weight: 300;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.04em;
+}
+
+
+.history-hero p {
+
+    max-width: 480px;
+
+    margin: 32px auto 0;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================
+   HISTORY SCROLL
+========================================= */
+
+.history-scroll {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -150px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.history-scroll span {
+
+    display: block;
+
+    width: 1px;
+
+    height: 42px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(255,255,255,0.65)
+        );
+}
+
+
+.history-scroll small {
+
+    font-size: 8px;
+
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+
+    color:
+        rgba(255,255,255,0.3);
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.history-timeline {
+
+    position: relative;
+
+    padding: 180px 24px 160px;
+
+    overflow: hidden;
+}
+
+
+.history-container {
+
+    position: relative;
+
+    width: min(1000px, 100%);
+
+    margin: 0 auto;
+}
+
+
+.timeline-line {
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 50%;
+
+    width: 1px;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(255,255,255,0.12) 10%,
+            rgba(255,255,255,0.12) 90%,
+            transparent
+        );
+}
+
+
+/* =========================================
+   TIMELINE ITEM
+========================================= */
+
+.timeline-item {
+
+    position: relative;
+
+    width: 50%;
+
+    min-height: 300px;
+
+    padding-right: 80px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+}
+
+
+.timeline-item-right {
+
+    margin-left: 50%;
+
+    padding-right: 0;
+
+    padding-left: 80px;
+
+    justify-content: flex-start;
+}
+
+
+/* =========================================
+   POINT
+========================================= */
+
+.timeline-point {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: -7px;
+
+    width: 14px;
+    height: 14px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid
+        rgba(154, 32, 72, 0.8);
+
+    border-radius: 50%;
+
+    background: #080608;
+
+    z-index: 3;
+}
+
+
+.timeline-item-right .timeline-point {
+
+    right: auto;
+
+    left: -7px;
+}
+
+
+.timeline-point span {
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #9d234c;
+
+    box-shadow:
+        0 0 12px
+        rgba(157, 35, 76, 0.8);
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.timeline-card {
+
+    position: relative;
+
+    width: min(390px, 100%);
+
+    padding: 34px;
+
+    background:
+        rgba(255,255,255,0.025);
+
+    border: 1px solid
+        rgba(255,255,255,0.07);
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.5s ease,
+        background 0.5s ease;
+}
+
+
+.timeline-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(157, 35, 76, 0.45);
+
+    background:
+        rgba(255,255,255,0.04);
+}
+
+
+.timeline-number {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 24px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.2em;
+
+    color:
+        rgba(255,255,255,0.2);
+}
+
+
+.timeline-date {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.28em;
+
+    color: #a72a53;
+}
+
+
+.timeline-date-text {
+
+    font-size: 9px;
+}
+
+
+.timeline-card h2 {
+
+    margin-bottom: 14px;
+
+    font-size: 28px;
+
+    font-weight: 300;
+
+    line-height: 1.2;
+}
+
+
+.timeline-card p {
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(255,255,255,0.45);
+}
+
+
+.timeline-card blockquote {
+
+    margin-top: 26px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid
+        rgba(255,255,255,0.08);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    font-style: italic;
+
+    color:
+        rgba(255,255,255,0.65);
+}
+
+
+/* =========================================
+   ENDING
+========================================= */
+
+.history-ending {
+
+    min-height: 60vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-top: 1px solid
+        rgba(255,255,255,0.05);
+}
+
+
+.history-ending-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.ending-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    background:
+        rgba(157, 35, 76, 0.7);
+}
+
+
+.history-ending p {
+
+    font-size:
+        clamp(28px, 5vw, 52px);
+
+    font-weight: 300;
+
+    letter-spacing: -0.02em;
+}
+
+
+.ending-heart {
+
+    font-size: 18px;
+
+    color: #9d234c;
+
+    text-shadow:
+        0 0 20px
+        rgba(157,35,76,0.5);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .history-hero-content {
+
+        padding-top: 50px;
+
+    }
+
+
+    .history-scroll {
+
+        bottom: -120px;
+
+    }
+
+
+    .timeline-item {
+
+        padding-right: 50px;
+
+    }
+
+
+    .timeline-item-right {
+
+        padding-left: 50px;
+
+    }
+
+
+    .timeline-card {
+
+        padding: 28px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .history-hero {
+
+        min-height: 90vh;
+
+    }
+
+
+    .history-hero-content {
+
+        width:
+            calc(100% - 32px);
+
+        padding-top: 40px;
+
+    }
+
+
+    .history-label {
+
+        margin-bottom: 22px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.3em;
+
+    }
+
+
+    .history-hero h1 {
+
+        font-size:
+            clamp(40px, 12vw, 62px);
+
+        line-height: 1.08;
+
+    }
+
+
+    .history-hero p {
+
+        margin-top: 24px;
+
+        font-size: 13px;
+
+    }
+
+
+    .history-scroll {
+
+        bottom: -100px;
+
+    }
+
+
+    .history-timeline {
+
+        padding:
+            100px 20px 100px;
+
+    }
+
+
+    .history-container {
+
+        padding-left: 28px;
+
+    }
+
+
+    .timeline-line {
+
+        left: 7px;
+
+        transform: none;
+
+    }
+
+
+    .timeline-item,
+    .timeline-item-right {
+
+        width: 100%;
+
+        min-height: auto;
+
+        margin: 0;
+
+        padding:
+            35px 0 35px 35px;
+
+        display: block;
+
+    }
+
+
+    .timeline-point,
+    .timeline-item-right .timeline-point {
+
+        left: 0;
+
+        right: auto;
+
+        top: 52px;
+
+        transform: translateX(-50%);
+
+    }
+
+
+    .timeline-card {
+
+        width: 100%;
+
+        padding: 25px 22px;
+
+    }
+
+
+    .timeline-card h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .timeline-card p {
+
+        font-size: 13px;
+
+    }
+
+
+    .history-ending {
+
+        min-height: 45vh;
+
+        padding: 60px 20px;
+
+    }
+
+
+    .history-ending p {
+
+        font-size: 32px;
+
+    }
+}

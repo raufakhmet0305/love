@@ -1,0 +1,360 @@
+/* =========================================
+   PRELOADER
+========================================= */
+
+.preloader {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #050505;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+.preloader.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+.preloader-content {
+
+    text-align: center;
+}
+
+
+.preloader-title {
+
+    font-size: 14px;
+
+    letter-spacing: 0.45em;
+
+    color: #ffffff;
+
+    opacity: 0;
+
+    animation:
+        preloaderTitle 1.4s ease forwards;
+}
+
+
+.preloader-line {
+
+    width: 0;
+
+    height: 1px;
+
+    margin: 18px auto 0;
+
+    background: #8f1f46;
+
+    animation:
+        preloaderLine 2s ease forwards;
+}
+
+
+@keyframes preloaderTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes preloaderLine {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 120px;
+    }
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(105, 15, 45, 0.15),
+            transparent 40%
+        ),
+        #050505;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+.intro.visible {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.intro.hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+.intro-content {
+
+    width: min(650px, calc(100% - 40px));
+
+    text-align: center;
+}
+
+
+.intro-text {
+
+    min-height: 50px;
+
+    font-size: clamp(20px, 3vw, 32px);
+
+    font-weight: 300;
+
+    line-height: 1.5;
+
+    color:
+        rgba(255,255,255,0.88);
+}
+
+
+.intro-button {
+
+    margin-top: 38px;
+
+    padding: 13px 28px;
+
+    border: 1px solid
+        rgba(255,255,255,0.25);
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.intro-button.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+.intro-button:hover {
+
+    background:
+        rgba(126, 23, 57, 0.3);
+
+    border-color:
+        rgba(160, 35, 75, 0.7);
+}
+
+
+/* =========================================
+   REVEAL
+========================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ORBS
+========================================= */
+
+.hero-orb-one {
+
+    animation:
+        orbFloatOne 12s ease-in-out infinite;
+}
+
+
+.hero-orb-two {
+
+    animation:
+        orbFloatTwo 15s ease-in-out infinite;
+}
+
+
+.hero-orb-three {
+
+    animation:
+        orbFloatThree 10s ease-in-out infinite;
+}
+
+
+@keyframes orbFloatOne {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(40px, 30px);
+    }
+}
+
+
+@keyframes orbFloatTwo {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-35px, -25px);
+    }
+}
+
+
+@keyframes orbFloatThree {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, -30px);
+    }
+}
+
+
+/* =========================================
+   SCROLL
+========================================= */
+
+.scroll-indicator span {
+
+    animation:
+        scrollPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes scrollPulse {
+
+    0%,
+    100% {
+        opacity: 0.35;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   GRAIN
+========================================= */
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 8000;
+
+    pointer-events: none;
+
+    opacity: 0.035;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+

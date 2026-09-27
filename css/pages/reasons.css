@@ -1,0 +1,680 @@
+/* =========================================
+   REASONS PAGE
+========================================= */
+
+.reasons-page {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.reasons-hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+.reasons-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(110, 15, 35, 0.18),
+            transparent 42%
+        );
+
+    pointer-events: none;
+}
+
+
+.reasons-hero-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(100, 10, 35, 0.14);
+
+    filter: blur(100px);
+
+    animation: reasonsGlow 9s ease-in-out infinite;
+}
+
+
+.reasons-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+    padding: 120px 24px 80px;
+}
+
+
+.reasons-hero h1 {
+    margin: 22px 0 28px;
+
+    font-size: clamp(52px, 8vw, 110px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+}
+
+
+.reasons-hero p {
+    max-width: 500px;
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+.reasons-scroll {
+    position: absolute;
+
+    left: 50%;
+    bottom: 35px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+}
+
+
+.reasons-scroll span {
+    width: 1px;
+    height: 42px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    animation: reasonsScroll 2s ease-in-out infinite;
+}
+
+
+.reasons-scroll small {
+    font-size: 9px;
+    letter-spacing: 0.25em;
+
+    color: rgba(255, 255, 255, 0.38);
+}
+
+
+/* =========================================
+   REASONS SECTION
+========================================= */
+
+.reasons-section {
+    position: relative;
+
+    padding: 150px 24px 180px;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(100, 10, 35, 0.08),
+            transparent 40%
+        );
+}
+
+
+.reasons-container {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+}
+
+
+.reasons-top {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+.reasons-intro {
+    margin-top: 18px;
+
+    color: rgba(255, 255, 255, 0.48);
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   DECK
+========================================= */
+
+.reasons-deck-wrapper {
+    position: relative;
+
+    width: min(100%, 620px);
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.reasons-progress {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    margin-bottom: 35px;
+
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 11px;
+    letter-spacing: 0.15em;
+}
+
+
+#reasonCurrent {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+.progress-line {
+    width: 90px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.16);
+}
+
+
+/* =========================================
+   CARD DECK
+========================================= */
+
+.reasons-deck {
+    position: relative;
+
+    width: 100%;
+    height: 430px;
+
+    perspective: 1200px;
+}
+
+
+.reason-card {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: min(100%, 520px);
+    height: 340px;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(var(--rotation, 0deg))
+        translateY(var(--offset, 0px));
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 22, 24, 0.98),
+            rgba(8, 8, 10, 0.98)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 50px rgba(100, 10, 35, 0.10);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.5s ease,
+        filter 0.5s ease;
+
+    user-select: none;
+
+    overflow: hidden;
+}
+
+
+.reason-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(130, 15, 45, 0.13),
+            transparent 55%
+        );
+
+    pointer-events: none;
+}
+
+
+.reason-card::after {
+    content: "♥";
+
+    position: absolute;
+
+    right: 25px;
+    bottom: 20px;
+
+    color: rgba(150, 25, 55, 0.22);
+
+    font-size: 18px;
+}
+
+
+.reason-card span {
+    position: relative;
+    z-index: 2;
+
+    max-width: 390px;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    font-size: clamp(25px, 4vw, 38px);
+    line-height: 1.25;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+
+/* Card positions */
+
+.reason-card.is-current {
+    z-index: 5;
+
+    opacity: 1;
+
+    filter: none;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.55),
+        0 0 65px rgba(120, 10, 40, 0.16);
+}
+
+
+.reason-card.is-next {
+    z-index: 4;
+
+    opacity: 0.65;
+
+    --offset: 18px;
+    --rotation: 2deg;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(2deg)
+        translateY(18px)
+        scale(0.96);
+}
+
+
+.reason-card.is-third {
+    z-index: 3;
+
+    opacity: 0.3;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-3deg)
+        translateY(36px)
+        scale(0.92);
+}
+
+
+.reason-card.is-hidden {
+    z-index: 1;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -50%)
+        translateY(80px)
+        scale(0.85);
+}
+
+
+/* =========================================
+   NEXT BUTTON
+========================================= */
+
+.reason-next {
+    margin-top: 45px;
+
+    min-width: 170px;
+    height: 52px;
+
+    padding: 0 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-family: inherit;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.reason-arrow {
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.reason-next:hover {
+    background: rgba(100, 10, 35, 0.22);
+
+    border-color: rgba(150, 30, 60, 0.55);
+
+    box-shadow:
+        0 0 30px rgba(120, 10, 40, 0.18);
+
+    transform: translateY(-2px);
+}
+
+
+.reason-next:hover .reason-arrow {
+    transform: translateX(4px);
+}
+
+
+.deck-hint {
+    margin-top: 18px;
+
+    color: rgba(255, 255, 255, 0.28);
+
+    font-size: 11px;
+    letter-spacing: 0.05em;
+}
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+.reasons-final {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 24px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(100, 10, 35, 0.15),
+            transparent 42%
+        );
+}
+
+
+.reasons-final-content {
+    opacity: 0.35;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+
+.reasons-final.visible .reasons-final-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.reasons-final h2 {
+    margin: 25px 0 30px;
+
+    font-size: clamp(52px, 8vw, 100px);
+    line-height: 0.95;
+    font-weight: 300;
+    letter-spacing: -0.05em;
+}
+
+
+.final-heart {
+    margin-bottom: 25px;
+
+    color: rgba(170, 35, 65, 0.8);
+
+    font-size: 28px;
+
+    animation: heartPulse 2.8s ease-in-out infinite;
+}
+
+
+.reasons-final p {
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes reasonsGlow {
+
+    0%,
+    100% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.85;
+    }
+}
+
+
+@keyframes reasonsScroll {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scaleY(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+
+@keyframes heartPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .reasons-section {
+        padding: 110px 20px 140px;
+    }
+
+    .reasons-deck {
+        height: 390px;
+    }
+
+    .reason-card {
+        height: 310px;
+    }
+
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .reasons-hero-content {
+        padding: 110px 20px 80px;
+    }
+
+    .reasons-hero h1 {
+        font-size: clamp(48px, 14vw, 75px);
+    }
+
+    .reasons-hero p {
+        font-size: 15px;
+    }
+
+
+    .reasons-section {
+        padding: 90px 16px 120px;
+    }
+
+
+    .reasons-top {
+        margin-bottom: 50px;
+    }
+
+
+    .reasons-deck {
+        height: 350px;
+    }
+
+
+    .reason-card {
+        width: calc(100% - 10px);
+        height: 285px;
+
+        padding: 30px 24px;
+    }
+
+
+    .reason-card span {
+        font-size: 25px;
+    }
+
+
+    .reason-next {
+        margin-top: 35px;
+    }
+
+
+    .deck-hint {
+        font-size: 10px;
+    }
+
+
+    .reasons-final {
+        min-height: 85vh;
+        padding: 80px 20px;
+    }
+
+
+    .reasons-final h2 {
+        font-size: clamp(48px, 14vw, 72px);
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .reasons-deck {
+        height: 320px;
+    }
+
+    .reason-card {
+        height: 260px;
+    }
+
+    .reason-card span {
+        font-size: 22px;
+    }
+
+}
+

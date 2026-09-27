@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Рауф & Полина — наша история"
+    >
+
+    <title>Рауф & Полина</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         PRELOADER
+    ========================================== -->
+
+    <div class="preloader" id="preloader">
+
+        <div class="preloader-content">
+
+            <div class="preloader-title">
+                RAUF × POLINA
+            </div>
+
+            <div class="preloader-line"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         INTRO
+    ========================================== -->
+
+    <section class="intro" id="intro">
+
+        <div class="intro-content">
+
+            <p class="intro-text" id="introText"></p>
+
+            <button
+                class="intro-button"
+                id="introButton"
+                type="button"
+            >
+                Продолжить
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="main-page" id="mainPage">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="site-header">
+
+            <div class="header-inner">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+                    R × P
+                </a>
+
+
+                <nav class="desktop-nav">
+
+                    <a
+                        href="index.html"
+                        class="active"
+                    >
+                        Главная
+                    </a>
+
+                    <a href="history.html">
+                        История
+                    </a>
+
+                    <a href="photos.html">
+                        Моменты
+                    </a>
+
+                    <a href="reasons.html">
+                        Почему я тебя люблю
+                    </a>
+
+                    <a href="letter.html">
+                        Письмо
+                    </a>
+
+                </nav>
+
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             MOBILE MENU
+        ====================================== -->
+
+        <div class="mobile-menu">
+
+            <nav>
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
+                    Главная
+                </a>
+
+                <a href="history.html">
+                    История
+                </a>
+
+                <a href="photos.html">
+                    Моменты
+                </a>
+
+                <a href="reasons.html">
+                    Почему я тебя люблю
+                </a>
+
+                <a href="letter.html">
+                    Письмо
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="hero">
+
+            <div class="hero-orb hero-orb-one"></div>
+
+            <div class="hero-orb hero-orb-two"></div>
+
+            <div class="hero-orb hero-orb-three"></div>
+
+
+            <div class="hero-content">
+
+                <div class="hero-date">
+                    06.03.2026
+                </div>
+                <button class="secret-trigger" data-secret="1" type="button">
+                    ♥
+                </button>
+
+
+                <h1 class="hero-title">
+
+                    <span>Рауф</span>
+
+                    <span class="hero-symbol">
+                        &
+                    </span>
+
+                    <span>Полина</span>
+
+                </h1>
+
+
+                <!-- COUNTER -->
+
+                <div class="relationship-counter">
+
+                    <div class="counter-item">
+
+                        <span
+                            class="counter-number"
+                            id="counterDays"
+                        >
+                            0
+                        </span>
+
+                        <span class="counter-label">
+                            дней
+                        </span>
+
+                    </div>
+
+
+                    <div class="counter-divider">
+                        :
+                    </div>
+
+
+                    <div class="counter-item">
+
+                        <span
+                            class="counter-number"
+                            id="counterHours"
+                        >
+                            00
+                        </span>
+
+                        <span class="counter-label">
+                            часов
+                        </span>
+
+                    </div>
+
+
+                    <div class="counter-divider">
+                        :
+                    </div>
+
+
+                    <div class="counter-item">
+
+                        <span
+                            class="counter-number"
+                            id="counterMinutes"
+                        >
+                            00
+                        </span>
+
+                        <span class="counter-label">
+                            минут
+                        </span>
+
+                    </div>
+
+
+                    <div class="counter-divider">
+                        :
+                    </div>
+
+
+                    <div class="counter-item">
+
+                        <span
+                            class="counter-number"
+                            id="counterSeconds"
+                        >
+                            00
+                        </span>
+
+                        <span class="counter-label">
+                            секунд
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p
+                    class="hero-message"
+                    id="heroMessage"
+                >
+                    А сколько всего ещё впереди…
+                </p>
+
+
+                <div class="scroll-indicator">
+
+                    <span></span>
+
+                    <small>
+                        Листай вниз
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             NAVIGATION
+        ====================================== -->
+
+        <section class="home-navigation">
+
+            <div class="home-navigation-inner">
+
+
+                <a
+                    href="history.html"
+                    class="home-nav-card"
+                >
+
+                    <span class="home-nav-number">
+                        01
+                    </span>
+
+                    <span class="home-nav-title">
+                        История
+                    </span>
+
+                    <span class="home-nav-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="photos.html"
+                    class="home-nav-card"
+                >
+
+                    <span class="home-nav-number">
+                        02
+                    </span>
+
+                    <span class="home-nav-title">
+                        Наши моменты
+                    </span>
+
+                    <span class="home-nav-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="reasons.html"
+                    class="home-nav-card"
+                >
+
+                    <span class="home-nav-number">
+                        03
+                    </span>
+
+                    <span class="home-nav-title">
+                        Почему я тебя люблю
+                    </span>
+
+                    <span class="home-nav-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="letter.html"
+                    class="home-nav-card"
+                >
+
+                    <span class="home-nav-number">
+                        04
+                    </span>
+
+                    <span class="home-nav-title">
+                        Письмо
+                    </span>
+
+                    <span class="home-nav-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <span>
+                Рауф & Полина
+            </span>
+
+            <span>
+                06.03.2026
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/main.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/secrets.js"></script>
+
+</body>
+
+</html>
